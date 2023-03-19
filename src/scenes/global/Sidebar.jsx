@@ -22,28 +22,32 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
   const [selected, setSelected] = useState("Dashboard");
-
+  const isRTL = false;
   return (
     <Box
-    // sx={{
-    //   "& .pro-sidebar-inner": {
-    //     background: `${colors.primary[400]} !important`,
-    //   },
-    //   "& .pro-icon-wrapper": {
-    //     backgroundColor: "transparent !important",
-    //   },
-    //   "& .pro-inner-item": {
-    //     padding: "5px 35px 5px",
-    //   },
-    //   "& .pro-inner-item:hover": {
-    //     color: "#868dfb !important",
-    //   },
-    //   "& .pro-menu-item.active": {
-    //     color: "#6870fa !important",
-    //   },
-    // }}
+      height="100%"
+      display="flex"
+      direction="rtl"
+      // sx={{
+      //   "& .pro-sidebar-inner": {
+      //     background: `${colors.primary[400]} !important`,
+      //   },
+      //   "& .pro-icon-wrapper": {
+      //     backgroundColor: "transparent !important",
+      //   },
+      //   "& .pro-inner-item": {
+      //     padding: "5px 35px 5px",
+      //   },
+      //   "& .pro-inner-item:hover": {
+      //     color: "#868dfb !important",
+      //   },
+      //   "& .pro-menu-item.active": {
+      //     color: "#6870fa !important",
+      //   },
+      // }}
     >
       <ProSideBar
+        defaultCollapsed
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
             background: colors.primary[400],
